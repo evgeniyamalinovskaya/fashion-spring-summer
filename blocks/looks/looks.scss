@@ -1,0 +1,46 @@
+.looks {
+  padding: 0 20px 0 20px;
+  margin: 0 auto;
+  max-width: 1440px;
+  background-color: $white-color;
+
+  &__title {
+    font-size: 48px;
+    line-height: 64px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0, 04em;
+    text-transform: uppercase;
+    margin: 0 0 40px;
+
+    @media screen and (max-width: 600px) {
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__gallery {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(284px, 1fr));
+    gap: 0;
+    list-style-type: none;
+
+  }
+
+  &__photo-item {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    list-style-type: none;
+    }
+
+  &_hidden {
+    @media screen and (max-width: 995px) {
+      display: none;
+    }
+
+  }
+  }
