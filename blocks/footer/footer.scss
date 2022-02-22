@@ -1,0 +1,163 @@
+.footer {
+  padding: 0;
+  margin: 80px 0 0 0;
+  background-color: #0A0A0A;
+
+  @media screen and (max-width: $tablet-media) {
+    margin: 60px 0 0 0;
+  }
+
+  @media screen and (max-width: $mobile-media) {
+    margin: 40px 0 0 0;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+
+    @media screen and (max-width: $tablet-media) {
+      grid-template-columns: 1fr 4fr 1fr;
+    }
+  }
+
+  &__content {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1440px;
+
+    @media screen and (max-width: $mobile-media) {
+      padding: 0 20px 0 20px;
+    }
+  }
+
+  &__container {
+    grid-column-start: 2;
+
+    @media screen and (max-width: $mobile-media) {
+      grid-column: 1 / 4;
+    }
+  }
+
+  &__subscribe {
+    padding: 40px 0 40px 0;
+    margin: auto;
+    @include footer-font-size;
+    width: 100%;
+
+    @media screen and (max-width: $mobile-media) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  .form {
+    &__email-container {
+      display: flex;
+      width: 100%;
+      margin: 0 auto 20px;
+
+      @media screen and (max-width: $mobile-media) {
+        display: block;
+      }
+    }
+
+    &__accept {
+      display: flex;
+      width: 100%;
+      margin: auto;
+    }
+
+    &__checkbox[type="checkbox"]:before {
+      position: relative;
+      display: block;
+      width: 20px;
+      height: 20px;
+      border: 1px solid #ffffff;
+      content: "";
+      background: #000000;
+    }
+
+    &__checkbox[type="checkbox"]:checked:after {
+      position: relative;
+      background-image: url(../../images/check-mark.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      display: block;
+      left: 5px;
+      top: -17px;
+      width: 12px;
+      height: 12px;
+      border-width: 1px;
+      content: "";
+    }
+
+    &__checkbox[type="checkbox"]:hover {
+      cursor: pointer;
+    }
+
+    &__checkbox-text {
+      padding-left: 15px;
+      color: $white-color;
+      font-family: $font-family;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+
+      @media screen and (max-width: $mobile-media) {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
+    &__email {
+      border: 0.5px solid $white-color;
+      box-sizing: border-box;
+      width: calc(100% - 108px);
+      background-color: transparent;
+      outline: 0;
+      font-family: $font-family;
+      color: $white-color;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+      text-indent: 20px;
+      cursor: pointer;
+
+      @media screen and (max-width: $mobile-media) {
+        width: 100%;
+        height: 44px;
+      }
+    }
+
+    &__submit {
+      width: 108px;
+      height: 48px;
+      @include header-footer-font-size;
+      border: 0.5px solid $white-color;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $white-color;
+        border-style: solid;
+        color: $black-color;
+      }
+
+      @media screen and (max-width: $mobile-media) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__copyright {
+    padding: 40px 0 40px 0;
+    margin: auto;
+    width: 100%;
+    @include footer-font-size;
+
+    @media screen and (max-width: $mobile-media) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
+
