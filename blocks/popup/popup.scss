@@ -1,0 +1,60 @@
+.popup {
+  position: fixed;
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  opacity: 0;
+  z-index: 2;
+  display: none;
+
+  &_opened {
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+    opacity: 1;
+    transition: display 0s 0s, visibility 0s 0s, opacity 0.3s linear;
+  }
+
+  &__container {
+    display: flex;
+    max-width: 480px;
+    height: 100vh;
+    background-color: $black-color;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__link-item {
+    list-style-type: none;
+    margin-bottom: 80px;
+  }
+
+  &__link-text {
+    @include header-footer-font-size;
+    text-decoration: none;
+  }
+
+  &__close {
+    background-image: url(../../images/desktop-close.png);
+    background-size: cover;
+    width: 48px;
+    height: 48px;
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+    margin-left: auto;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 320px) {
+    &__close {
+      background-image: url(../../images/mobile-close.png);
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

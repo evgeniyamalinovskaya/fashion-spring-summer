@@ -1,0 +1,29 @@
+@mixin font-size-title {
+  color: $black-color;
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 64px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+@mixin footer-font-size {
+  color: $white-color;
+  font-family: $font-family;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+}
+
+@mixin header-footer-font-size {
+  background-color: $black-color;
+  color: $white-color;
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
