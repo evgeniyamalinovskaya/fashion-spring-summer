@@ -24,3 +24,4 @@ Figma
 * Адаптивная отзывчивая верстка
 
 **GitHub Pages**
+https://evgeniyamalinovskaya.github.io/fashion-spring-summer/
