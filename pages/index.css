@@ -27,8 +27,8 @@
 .header__menu-button {
   padding: 0;
   margin: 0;
-  border: none;
-  background-image: url("../../images/menu.svg");
+  outline: 0;
+  background-image: url("../images/menu.svg");
   border: 0;
   width: 48px;
   height: 48px;
@@ -641,7 +641,7 @@
 }
 .footer .form__checkbox[type=checkbox]:checked:after {
   position: relative;
-  background-image: url(../../images/check-mark.svg);
+  background-image: url(../images/check-mark.svg);
   background-repeat: no-repeat;
   background-position: center;
   display: block;
@@ -772,7 +772,7 @@
   text-decoration: none;
 }
 .popup__close {
-  background-image: url(../../images/desktop-close.png);
+  background-image: url(../images/desktop-close.png);
   background-size: cover;
   width: 48px;
   height: 48px;

@@ -8,17 +8,38 @@ const popupMenu = document.querySelector('.popup');
 menuButton.addEventListener('click', () => openPopup(popupMenu));
 
 //Функция закрытия меню
-closeButtons.addEventListener('click', () => closePopup(popupMenu));
+//closeButtons.addEventListener('click', () => closePopup(popupMenu));
+
+const buttonEscKey = 27;
 
 // Универсальная функция открытия всех popup
 function openPopup(popupMenu) {
     popupMenu.classList.add('popup_opened');
+    document.addEventListener('keydown', handleEscUp);
+    popupMenu.addEventListener('mousedown', handleClickOverlay);
 }
 
 // Универсальная функция закрытия всех popup
 function closePopup(popupMenu) {
     popupMenu.classList.remove('popup_opened');
+    document.removeEventListener('keydown', handleEscUp);
+    popupMenu.removeEventListener('mousedown', handleClickOverlay);
 }
+
+// Функция на overlay
+const handleClickOverlay = (evt) => {
+    if (evt.target.classList.contains('popup') || evt.target.classList.contains('popup__close')) {
+        closePopup(evt.currentTarget);
+    }
+};
+
+// //Функция на esc
+const handleEscUp = (evt) => {
+    if (evt.keyCode === buttonEscKey) {
+        const activePopup = document.querySelector('.popup_opened');
+        closePopup(activePopup);
+    }
+};
 
 //Форма submit
 const formElement = document.querySelector('.form');
